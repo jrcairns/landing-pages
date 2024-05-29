@@ -2,7 +2,7 @@ import { AnimatedGridPattern } from "@/components/magicui/animate-grid-pattern";
 import { FeatureCard10 } from "@/components/magicui/feature-card-10";
 import { cn } from "@/lib/utils";
 
-export default function Attractivo() {
+export default function CreateFreeForms() {
     return (
         <div className="bg-muted/40">
             <div className="fixed inset-0 w-screen h-screen">
