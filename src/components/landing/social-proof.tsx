@@ -45,7 +45,6 @@ export const TestimonialCard = ({
             " border border-neutral-200 bg-white",
             // dark styles
             "dark:bg-black dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
-            "group relative flex flex-col justify-between overflow-hidden rounded-xl bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:bg-black dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] col-span-3 lg:col-span-1",
             className,
         )}
         {...props} // Spread the rest of the props here
@@ -75,7 +74,7 @@ export const TestimonialCard = ({
     </div>
 );
 
-export const testimonials = [
+const testimonials = [
     {
         name: "Alex Rivera",
         role: "CTO at InnovateTech",
@@ -97,7 +96,7 @@ export const testimonials = [
         img: "https://randomuser.me/api/portraits/women/12.jpg",
         description: (
             <p>
-                Implementing #AIStream&apos;s customer prediction model has drastically
+                Implementing #AIStream's customer prediction model has drastically
                 improved our targeting strategy.
                 <Highlight>Seeing a 50% increase in conversion rates!</Highlight> Highly
                 recommend their solutions.
@@ -110,7 +109,7 @@ export const testimonials = [
         img: "https://randomuser.me/api/portraits/men/45.jpg",
         description: (
             <p>
-                As a startup, we need to move fast and stay ahead. #CodeAI&apos;s automated
+                As a startup, we need to move fast and stay ahead. #CodeAI's automated
                 coding assistant helps us do just that.
                 <Highlight>Our development speed has doubled.</Highlight> Essential tool
                 for any startup.
@@ -123,7 +122,7 @@ export const testimonials = [
         img: "https://randomuser.me/api/portraits/women/83.jpg",
         description: (
             <p>
-                #VoiceGen&apos;s AI-driven voice synthesis has made creating global products
+                #VoiceGen's AI-driven voice synthesis has made creating global products
                 a breeze.
                 <Highlight>Localization is now seamless and efficient.</Highlight> A
                 must-have for global product teams.
@@ -136,7 +135,7 @@ export const testimonials = [
         img: "https://randomuser.me/api/portraits/men/1.jpg",
         description: (
             <p>
-                Leveraging #DataCrunch&apos;s AI for our financial models has given us an
+                Leveraging #DataCrunch's AI for our financial models has given us an
                 edge in predictive accuracy.
                 <Highlight>
                     Our investment strategies are now powered by real-time data analytics.
@@ -151,7 +150,7 @@ export const testimonials = [
         img: "https://randomuser.me/api/portraits/women/5.jpg",
         description: (
             <p>
-                #LogiTech&apos;s supply chain optimization tools have drastically reduced our
+                #LogiTech's supply chain optimization tools have drastically reduced our
                 operational costs.
                 <Highlight>
                     Efficiency and accuracy in logistics have never been better.
@@ -165,7 +164,7 @@ export const testimonials = [
         img: "https://randomuser.me/api/portraits/men/14.jpg",
         description: (
             <p>
-                By integrating #GreenTech&apos;s sustainable energy solutions, we&apos;ve seen a
+                By integrating #GreenTech's sustainable energy solutions, we've seen a
                 significant reduction in carbon footprint.
                 <Highlight>
                     Leading the way in eco-friendly business practices.
@@ -180,7 +179,7 @@ export const testimonials = [
         img: "https://randomuser.me/api/portraits/women/56.jpg",
         description: (
             <p>
-                #TrendSetter&apos;s market analysis AI has transformed how we approach
+                #TrendSetter's market analysis AI has transformed how we approach
                 fashion trends.
                 <Highlight>
                     Our campaigns are now data-driven with higher customer engagement.
@@ -210,9 +209,9 @@ export const testimonials = [
         img: "https://randomuser.me/api/portraits/women/73.jpg",
         description: (
             <p>
-                #LearnSmart&apos;s AI-driven personalized learning plans have doubled student
+                #LearnSmart's AI-driven personalized learning plans have doubled student
                 performance metrics.
-                <Highlight>Education tailored to every learner&apos;s needs.</Highlight>{" "}
+                <Highlight>Education tailored to every learner's needs.</Highlight>{" "}
                 Transforming the educational landscape.
             </p>
         ),
@@ -223,7 +222,7 @@ export const testimonials = [
         img: "https://randomuser.me/api/portraits/men/25.jpg",
         description: (
             <p>
-                With #CyberShield&apos;s AI-powered security systems, our data protection
+                With #CyberShield's AI-powered security systems, our data protection
                 levels are unmatched.
                 <Highlight>Ensuring safety and trust in digital spaces.</Highlight>{" "}
                 Redefining cybersecurity standards.
@@ -236,7 +235,7 @@ export const testimonials = [
         img: "https://randomuser.me/api/portraits/women/78.jpg",
         description: (
             <p>
-                #DesignPro&apos;s AI has streamlined our creative process, enhancing
+                #DesignPro's AI has streamlined our creative process, enhancing
                 productivity and innovation.
                 <Highlight>Bringing creativity and technology together.</Highlight> A
                 game-changer for creative industries.
@@ -249,7 +248,7 @@ export const testimonials = [
         img: "https://randomuser.me/api/portraits/men/54.jpg",
         description: (
             <p>
-                #VentureAI&apos;s insights into startup ecosystems have been invaluable for
+                #VentureAI's insights into startup ecosystems have been invaluable for
                 our growth and funding strategies.
                 <Highlight>Empowering startups with data-driven decisions.</Highlight> A
                 catalyst for startup success.
@@ -260,35 +259,30 @@ export const testimonials = [
 
 export function SocialProofTestimonials() {
     return (
-        <section id="testimonials">
-            <div className="py-14">
-                <div className="">
-                    {/* <h3 className="text-center text-sm font-semibold text-gray-500">
-                        TESTIMONIALS
-                    </h3> */}
-                    <div className="relative mt-6 max-h-[650px] overflow-hidden">
-                        <div className="gap-0 md:columns-2">
-                            {Array(Math.ceil(testimonials.length / 3))
-                                .fill(0)
-                                .map((_, i) => (
-                                    <Marquee
-                                        vertical
-                                        key={i}
-                                        className={cn({
-                                            "[--duration:60s]": i === 1,
-                                            "[--duration:30s]": i === 2,
-                                            "[--duration:70s]": i === 3,
-                                        })}
-                                    >
-                                        {testimonials.slice(i * 3, (i + 1) * 3).map((card, idx) => (
-                                            <TestimonialCard {...card} key={idx} />
-                                        ))}
-                                    </Marquee>
-                                ))}
-                        </div>
-                        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 w-full bg-gradient-to-t from-white from-20% dark:from-black"></div>
-                        <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 w-full bg-gradient-to-b from-white from-20% dark:from-black"></div>
+        <section className="w-full" id="testimonials">
+            <div className="w-full transform-gpu flex-col items-center md:justify-between gap-5 px-6 md:rounded-lg md:outline md:outline-primary/5 md:bg-background md:overflow-hidden md:shadow md:flex-row">
+                <div className="relative mt-6 max-h-[650px] overflow-hidden">
+                    <div className="gap-4 md:columns-2 xl:columns-3 2xl:columns-4">
+                        {Array(Math.ceil(testimonials.length / 3))
+                            .fill(0)
+                            .map((_, i) => (
+                                <Marquee
+                                    vertical
+                                    key={i}
+                                    className={cn({
+                                        "[--duration:60s]": i === 1,
+                                        "[--duration:30s]": i === 2,
+                                        "[--duration:70s]": i === 3,
+                                    })}
+                                >
+                                    {testimonials.slice(i * 3, (i + 1) * 3).map((card, idx) => (
+                                        <TestimonialCard {...card} key={idx} />
+                                    ))}
+                                </Marquee>
+                            ))}
                     </div>
+                    <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 w-full bg-gradient-to-t from-background from-20% to-transparent"></div>
+                    <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 w-full bg-gradient-to-b from-background from-20% to-transparent"></div>
                 </div>
             </div>
         </section>

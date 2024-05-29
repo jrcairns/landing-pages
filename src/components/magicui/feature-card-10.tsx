@@ -35,10 +35,10 @@ export function FeatureCard10() {
                 )}
             />
             <div className="md:max-w-xl flex flex-col md:pl-16 py-16">
-                <h1 className="text-balance text-4xl sm:text-5xl font-medium tracking-tighter md:text-6xl">
-                    Create forms and go live <span className="relative px-2"><span className="absolute inset-x-0 bottom-1 h-9 sm:h-10 md:h-16 bg-orange-300/70"></span><span className="relative">instantly</span></span>.
+                <h1 className="text-balance text-4xl sm:text-5xl font-semibold text-transparent bg-clip-text tracking-tighter md:text-6xl bg-gradient-to-br from-primary from-30% to-primary/60 pb-6">
+                    Create forms and go live <span className="relative px-2 text-transparent bg-clip-text bg-gradient-to-br dark:from-orange-300 dark:to-orange-300/60 from-30% from-orange-600 to-orange-600/60">instantly.</span>
                 </h1>
-                <div className="mt-4">
+                <div>
                     <p className="text-primary/80 text-pretty">Instantly create and deploy custom forms with unique web URLs in seconds. Simplify your workflow and start tracking analytics effortlessly.</p>
                     <ul className="mt-6 space-y-2">
                         <li className="flex items-center space-x-2">
@@ -95,7 +95,10 @@ export function FeatureCard10() {
                     <div className="flex space-x-4 items-center mt-6">
                         <AvatarCircles />
                         <div className="flex flex-col space-y-1">
-                            <Rating />
+                            <div className="space-x-1.5 flex items-center">
+                                <Rating />
+                                <span className="font-semibold text-sm block leading-none">5.0</span>
+                            </div>
                             <p className="text-sm font-medium text-primary/80">
                                 <span className="font-semibold">200+</span> happy customers
                             </p>
@@ -105,7 +108,7 @@ export function FeatureCard10() {
             </div>
             <div className="hidden lg:block relative w-full xl:w-1/2 flex-1 bg-gradient-to-br from-transparent to-muted/40 dark:to-muted/10">
                 <div
-                    className="relative -right-[60px] top-[-130px] max-h-[650px] grid [transform:rotate(-15deg)translateZ(10px);]"
+                    className="relative -right-[60px] top-[-130px] max-h-[586px] grid [transform:rotate(-15deg)translateZ(10px);]"
                 >
                     <div className="relative mt-6 overflow-hidden">
                         <div className="gap-0 min-[1200px]:columns-2">

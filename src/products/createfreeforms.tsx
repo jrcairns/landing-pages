@@ -1,9 +1,5 @@
-import { CallToAction } from "@/components/landing/cta-section";
-import Features from "@/components/landing/features";
-import { SocialProofTestimonials } from "@/components/landing/social-proof";
 import { AnimatedGridPattern } from "@/components/magicui/animate-grid-pattern";
 import { FeatureCard10 } from "@/components/magicui/feature-card-10";
-import { RegisterInterest } from "@/components/register-interest";
 import { cn } from "@/lib/utils";
 
 export default function Attractivo() {
@@ -25,9 +21,6 @@ export default function Attractivo() {
             </div>
             <div className="px-4 sm:container md:bg-transparent relative min-h-screen flex items-center">
                 <FeatureCard10 />
-            </div>
-            <div className="px-4 sm:container md:bg-transparent relative min-h-screen flex items-center">
-                <CallToAction />
             </div>
         </div>
     )

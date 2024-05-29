@@ -132,14 +132,14 @@ const features = [
     },
 ];
 
-export default function BentoDemo() {
+export default function Features() {
     return (
-        <div className="py-14" id="features">
+        <section className="w-full" id="features">
             <BentoGrid>
                 {features.map((feature, idx) => (
                     <BentoCard key={idx} {...feature} />
                 ))}
             </BentoGrid>
-        </div>
+        </section>
     );
 }

@@ -14,6 +14,10 @@ export function currentProduct() {
             return "attractivo"
         }
 
+        if (host.includes("createfreeforms")) {
+            return "createfreeforms"
+        }
+
         return "rsc"
     } else {
         throw new Error("'@/current-product/server' must be called from the server. Use '@/current-product/client' in client components.")
