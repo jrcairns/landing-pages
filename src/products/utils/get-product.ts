@@ -27,6 +27,7 @@ export function currentProduct() {
 export const products = [
     "rsc.wtf",
     "attractivo.ca",
+    "createfreeforms"
 ] as const
 
 export const redesigns = [
@@ -37,4 +38,5 @@ export const redesigns = [
 export const mockProducts = {
     "localhost:3000": "attractivo.ca",
     "localhost:3001": "rsc.wtf",
+    "localhost:3002": "createfreeforms.com",
 } as const

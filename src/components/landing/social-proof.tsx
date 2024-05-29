@@ -96,7 +96,7 @@ const testimonials = [
         img: "https://randomuser.me/api/portraits/women/12.jpg",
         description: (
             <p>
-                Implementing #AIStream's customer prediction model has drastically
+                Implementing #AIStream&apos;s customer prediction model has drastically
                 improved our targeting strategy.
                 <Highlight>Seeing a 50% increase in conversion rates!</Highlight> Highly
                 recommend their solutions.
@@ -109,7 +109,7 @@ const testimonials = [
         img: "https://randomuser.me/api/portraits/men/45.jpg",
         description: (
             <p>
-                As a startup, we need to move fast and stay ahead. #CodeAI's automated
+                As a startup, we need to move fast and stay ahead. #CodeAI&apos;s automated
                 coding assistant helps us do just that.
                 <Highlight>Our development speed has doubled.</Highlight> Essential tool
                 for any startup.
@@ -122,7 +122,7 @@ const testimonials = [
         img: "https://randomuser.me/api/portraits/women/83.jpg",
         description: (
             <p>
-                #VoiceGen's AI-driven voice synthesis has made creating global products
+                #VoiceGen&apos;s AI-driven voice synthesis has made creating global products
                 a breeze.
                 <Highlight>Localization is now seamless and efficient.</Highlight> A
                 must-have for global product teams.
@@ -135,7 +135,7 @@ const testimonials = [
         img: "https://randomuser.me/api/portraits/men/1.jpg",
         description: (
             <p>
-                Leveraging #DataCrunch's AI for our financial models has given us an
+                Leveraging #DataCrunch&apos;s AI for our financial models has given us an
                 edge in predictive accuracy.
                 <Highlight>
                     Our investment strategies are now powered by real-time data analytics.
@@ -150,7 +150,7 @@ const testimonials = [
         img: "https://randomuser.me/api/portraits/women/5.jpg",
         description: (
             <p>
-                #LogiTech's supply chain optimization tools have drastically reduced our
+                #LogiTech&apos;s supply chain optimization tools have drastically reduced our
                 operational costs.
                 <Highlight>
                     Efficiency and accuracy in logistics have never been better.
@@ -164,7 +164,7 @@ const testimonials = [
         img: "https://randomuser.me/api/portraits/men/14.jpg",
         description: (
             <p>
-                By integrating #GreenTech's sustainable energy solutions, we've seen a
+                By integrating #GreenTech&apos;s sustainable energy solutions, we&apos;ve seen a
                 significant reduction in carbon footprint.
                 <Highlight>
                     Leading the way in eco-friendly business practices.
@@ -179,7 +179,7 @@ const testimonials = [
         img: "https://randomuser.me/api/portraits/women/56.jpg",
         description: (
             <p>
-                #TrendSetter's market analysis AI has transformed how we approach
+                #TrendSetter&apos;s market analysis AI has transformed how we approach
                 fashion trends.
                 <Highlight>
                     Our campaigns are now data-driven with higher customer engagement.
@@ -209,9 +209,9 @@ const testimonials = [
         img: "https://randomuser.me/api/portraits/women/73.jpg",
         description: (
             <p>
-                #LearnSmart's AI-driven personalized learning plans have doubled student
+                #LearnSmart&apos;s AI-driven personalized learning plans have doubled student
                 performance metrics.
-                <Highlight>Education tailored to every learner's needs.</Highlight>{" "}
+                <Highlight>Education tailored to every learner&apos;s needs.</Highlight>{" "}
                 Transforming the educational landscape.
             </p>
         ),
@@ -222,7 +222,7 @@ const testimonials = [
         img: "https://randomuser.me/api/portraits/men/25.jpg",
         description: (
             <p>
-                With #CyberShield's AI-powered security systems, our data protection
+                With #CyberShield&apos;s AI-powered security systems, our data protection
                 levels are unmatched.
                 <Highlight>Ensuring safety and trust in digital spaces.</Highlight>{" "}
                 Redefining cybersecurity standards.
@@ -235,7 +235,7 @@ const testimonials = [
         img: "https://randomuser.me/api/portraits/women/78.jpg",
         description: (
             <p>
-                #DesignPro's AI has streamlined our creative process, enhancing
+                #DesignPro&apos;s AI has streamlined our creative process, enhancing
                 productivity and innovation.
                 <Highlight>Bringing creativity and technology together.</Highlight> A
                 game-changer for creative industries.
@@ -248,7 +248,7 @@ const testimonials = [
         img: "https://randomuser.me/api/portraits/men/54.jpg",
         description: (
             <p>
-                #VentureAI's insights into startup ecosystems have been invaluable for
+                #VentureAI&apos;s insights into startup ecosystems have been invaluable for
                 our growth and funding strategies.
                 <Highlight>Empowering startups with data-driven decisions.</Highlight> A
                 catalyst for startup success.
