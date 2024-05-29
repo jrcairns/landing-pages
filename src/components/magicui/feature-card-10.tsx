@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import { format, startOfWeek } from "date-fns";
 import { CheckIcon, Flame, LockKeyholeOpen, MoreHorizontal, PlusCircle } from "lucide-react";
 import Link from "next/link";
+import { RegisterInterest } from "../register-interest";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
@@ -17,20 +18,28 @@ import DotPattern from "./dot-pattern";
 import Marquee from "./marquee";
 import { Rating } from "./rating";
 
+function Success() {
+    return <div className="w-full text-foreground space-x-2 flex items-center justify-center h-[50px] bg-muted/40 border border-input">
+        <span className="text-sm">Thank you for registering!</span>
+        <CheckIcon className="size-4" />
+    </div>
+}
+
+
 export function FeatureCard10() {
     return (
-        <div className="flex h-full w-full transform-gpu flex-col items-center lg:justify-between gap-5 lg:rounded-lg lg:outline lg:outline-primary/5 lg:bg-background lg:overflow-hidden lg:shadow lg:flex-row">
+        <div className="flex h-full w-full transform-gpu flex-col items-center md:justify-between gap-5 md:rounded-lg md:outline md:outline-primary/5 md:bg-background md:overflow-hidden md:shadow md:flex-row">
             <DotPattern
                 className={cn(
-                    "hidden lg:block dark:opacity-50 [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]",
+                    "hidden md:block dark:opacity-50 [mask-image:radial-gradient(350px_circle_at_center,white,transparent)]",
                 )}
             />
-            <div className="md:max-w-xl flex flex-col lg:pl-16 py-16">
+            <div className="md:max-w-xl flex flex-col md:pl-16 py-16">
                 <h1 className="text-balance text-4xl sm:text-5xl font-medium tracking-tighter md:text-6xl">
                     Create forms and go live <span className="relative px-2"><span className="absolute inset-x-0 bottom-1 h-9 sm:h-10 md:h-16 bg-orange-300/70"></span><span className="relative">instantly</span></span>.
                 </h1>
                 <div className="mt-4">
-                    <p className="text-primary/80">Instantly create and deploy custom forms with unique web URLs in seconds. Simplify your workflow and start tracking analytics effortlessly.</p>
+                    <p className="text-primary/80 text-pretty">Instantly create and deploy custom forms with unique web URLs in seconds. Simplify your workflow and start tracking analytics effortlessly.</p>
                     <ul className="mt-6 space-y-2">
                         <li className="flex items-center space-x-2">
                             <CheckIcon strokeWidth={3} className="h-5 w-5 rounded-full bg-green-200 dark:bg-green-500 dark:text-black p-1 flex" />
@@ -46,27 +55,42 @@ export function FeatureCard10() {
                         </li>
                     </ul>
                     <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mt-8 relative rounded-md">
-                        <div className="bg-muted/40 relative shadow items-center flex w-full rounded-md border border-input text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2 disabled:cursor-not-allowed">
-                            <div className="text-xs font-medium text-muted-foreground rounded-l-md border-r border-input flex items-center px-2 h-full">
-                                https://vooli.ca/f/
+                        <RegisterInterest
+                            successComponent={<Success />}
+                        >
+                            <div className="bg-background">
+                                <div className="bg-muted/40 min-h-[50px] relative shadow items-center flex w-full rounded-md border border-input text-sm ring-offset-background placeholder:text-muted-foreground focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2 disabled:cursor-not-allowed">
+                                    <div className="text-xs font-medium text-muted-foreground rounded-l-md border-r border-input flex items-center px-2">
+                                        <span>https://vooli.ca/f/</span>
+                                    </div>
+                                    <input name="email" className="!outline-none block flex-1 px-2.5 bg-transparent" placeholder="feedback-form" />
+                                    <div className="p-1 sm:w-auto w-full hidden sm:block">
+                                        <Button
+                                            type="submit"
+                                            className={cn(
+                                                "flex group relative w-full gap-2 overflow-hidden",
+                                                "transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-2",
+                                            )}
+                                        >
+                                            <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform-gpu bg-background opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-96" />
+                                            <span>Claim URL</span>
+                                            <LockKeyholeOpen className="size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
+                                        </Button>
+                                    </div>
+                                </div>
                             </div>
-                            <input className="!outline-none h-full block flex-1 px-2.5 bg-transparent" placeholder="feedback-form" />
-                            <div className="p-1 sm:w-auto w-full">
-                                <Button
-                                    asChild
-                                    className={cn(
-                                        "group relative w-full flex gap-2 overflow-hidden",
-                                        "transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-2",
-                                    )}
-                                >
-                                    <Link href="#">
-                                        <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform-gpu bg-background opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-96" />
-                                        <span>Claim URL</span>
-                                        <LockKeyholeOpen className="size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
-                                    </Link>
-                                </Button>
-                            </div>
-                        </div>
+                            <Button
+                                type="submit"
+                                className={cn(
+                                    "flex sm:hidden mt-2 group relative w-full gap-2 overflow-hidden",
+                                    "transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-2",
+                                )}
+                            >
+                                <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform-gpu bg-background opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-96" />
+                                <span>Claim URL</span>
+                                <LockKeyholeOpen className="size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
+                            </Button>
+                        </RegisterInterest>
                     </div>
                     <div className="flex space-x-4 items-center mt-6">
                         <AvatarCircles />
@@ -79,7 +103,7 @@ export function FeatureCard10() {
                     </div>
                 </div>
             </div>
-            <div className="hidden lg:block relative w-full xl:w-1/2 flex-1 bg-gradient-to-br from-transparent to-muted/40">
+            <div className="hidden lg:block relative w-full xl:w-1/2 flex-1 bg-gradient-to-br from-transparent to-muted/40 dark:to-muted/10">
                 <div
                     className="relative -right-[60px] top-[-130px] max-h-[650px] grid [transform:rotate(-15deg)translateZ(10px);]"
                 >

@@ -31,6 +31,6 @@ export const redesigns = [
 
 // map localhost ports to product URLs to avoid host file setup
 export const mockProducts = {
-    "localhost:3000": "rsc.wtf",
-    "localhost:3001": "attractivo.ca",
+    "localhost:3000": "attractivo.ca",
+    "localhost:3001": "rsc.wtf",
 } as const
