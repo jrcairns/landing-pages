@@ -59,7 +59,7 @@ export function FeatureCard10() {
                                         "transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-2",
                                     )}
                                 >
-                                    <Link href="/dashboard">
+                                    <Link href="#">
                                         <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform-gpu bg-background opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-96" />
                                         <span>Claim URL</span>
                                         <LockKeyholeOpen className="size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
