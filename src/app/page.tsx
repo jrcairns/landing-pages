@@ -1,4 +1,4 @@
-import { currentProduct } from "@/current-product/server";
+import { currentProduct } from "@/products/utils/get-product";
 import dynamic from "next/dynamic";
 
 const Rsc = dynamic(() => import('../products/rsc'))

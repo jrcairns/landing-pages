@@ -1,5 +1,4 @@
 import { headers } from "next/headers"
-import { mockProducts, redesigns } from "../config"
 
 export function currentProduct() {
     if (typeof window === "undefined") {
@@ -8,8 +7,6 @@ export function currentProduct() {
             : headers().get("host")!
 
         if (host.includes("rsc")) {
-            // const pathname = headers().get("x-pathname")!
-            // if (redesigns.includes(pathname)) return "rsc_two"
             return "rsc"
         }
 
@@ -22,3 +19,18 @@ export function currentProduct() {
         throw new Error("'@/current-product/server' must be called from the server. Use '@/current-product/client' in client components.")
     }
 }
+
+export const products = [
+    "rsc.wtf",
+    "attractivo.ca",
+] as const
+
+export const redesigns = [
+    "/dashboard/forms"
+]
+
+// map localhost ports to product URLs to avoid host file setup
+export const mockProducts = {
+    "localhost:3000": "rsc.wtf",
+    "localhost:3001": "attractivo.ca",
+} as const
