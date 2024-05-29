@@ -1,21 +1,20 @@
 "use client";
 
-import { Button, buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import Marquee from "@/components/magicui/marquee";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { motion, useAnimation, useInView } from "framer-motion";
 import {
   BarChart,
-  ChevronRight,
   File,
   Globe,
   HeartHandshake,
   Rss,
-  Shield,
+  Shield
 } from "lucide-react";
-import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
+import { useEffect, useId, useRef, useState } from "react";
 
 const tiles = [
   {
