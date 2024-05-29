@@ -1,20 +1,14 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import { BorderBeam } from "@/components/magicui/border-beam";
+import { cn } from "@/lib/utils";
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { motion, useInView } from "framer-motion";
-import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 import { useRef } from "react";
 import { Button } from "../ui/button";
-import Link from "next/link";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
-import { AuthSession } from "@/lib/auth/utils";
 
-type HeroProps = {
-  session: AuthSession["session"]
-}
-
-export default function Hero({ session }: HeroProps) {
+export default function Hero() {
   const fadeInRef = useRef(null);
   const fadeInInView = useInView(fadeInRef, {
     once: true,
@@ -81,35 +75,19 @@ export default function Hero({ session }: HeroProps) {
                   type: "spring",
                 }}
               >
-                {session?.user ? (
-                  <Button
-                    asChild
-                    className={cn(
-                      "group relative w-full gap-2 overflow-hidden",
-                      "transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-2",
-                    )}
-                  >
-                    <Link href="/dashboard">
-                      <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform-gpu bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-96 dark:bg-black" />
-                      <span>Go to dashboard</span>
-                      <ArrowRightIcon className="size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
-                    </Link>
-                  </Button>
-                ) : (
-                  <Button
-                    asChild
-                    className={cn(
-                      "group relative w-full gap-2 overflow-hidden",
-                      "transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-2",
-                    )}
-                  >
-                    <Link href="/sign-up">
-                      <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform-gpu bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-96 dark:bg-black" />
-                      <span>Get started</span>
-                      <ArrowRightIcon className="size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
-                    </Link>
-                  </Button>
-                )}
+                <Button
+                  asChild
+                  className={cn(
+                    "group relative w-full gap-2 overflow-hidden",
+                    "transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-2",
+                  )}
+                >
+                  <Link href="/sign-up">
+                    <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform-gpu bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-96 dark:bg-black" />
+                    <span>Get started</span>
+                    <ArrowRightIcon className="size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
+                  </Link>
+                </Button>
               </motion.div>
             </div>
           </div>
