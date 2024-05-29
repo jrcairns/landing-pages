@@ -15,8 +15,6 @@ export async function register(initialState: any, data: FormData): Promise<Actio
     const name = data.get("name") ?? undefined
     const phone = data.get("phone") ?? undefined
 
-    cookies().set('registered', 'true')
-
     return {
         success: true,
         error: "test"
