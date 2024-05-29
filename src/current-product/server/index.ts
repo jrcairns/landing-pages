@@ -8,8 +8,8 @@ export function currentProduct() {
             : headers().get("host")!
 
         if (host.includes("rsc")) {
-            const pathname = headers().get("x-pathname")!
-            if (redesigns.includes(pathname)) return "rsc_two"
+            // const pathname = headers().get("x-pathname")!
+            // if (redesigns.includes(pathname)) return "rsc_two"
             return "rsc"
         }
 
